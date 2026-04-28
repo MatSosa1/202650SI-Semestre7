@@ -3,7 +3,7 @@ author: Mateo Sosa
 nrc: 30808
 assignment: Ingeniería de la Seguridad del Software
 filetype: pdf
-template: default
+template: informe
 
 ---
 

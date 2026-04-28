@@ -55,3 +55,56 @@ El motor lógico es el sistema que transforma entradas (input, IA, red) en cambi
 
 - Si el jugador recoge 100 monedas -> Gana una vida extra
 - Si la vida del enemigo llega a 0 -> Se elimina del juego
+
+## Ciclo del motor lógico
+
+Cada frame realiza:
+
+1. Recibir acciones
+2. Validar reglas
+3. Actualizar estado
+4. Generar resultados
+
+### Tareas principales
+
+Movimiento
+: `player.x += player.vx * dt;`
+
+Acciones
+: `if (cmd == "disparar") crearBala();`
+
+Estado Global
+: `tiempoJuego += dt;`
+
+Validación
+: `if (vidaJugador == 0) gameOver();`
+
+# Gestión de los Datos de un Videojuego
+
+Se refiere a cómo se almacenan, organizan y acceden los datos que usa el juego: estados del jugador, configuración, progreso, inventarios, estadísticas, etc.
+
+Estos datos incluyen:
+
+- Estado del jugador
+- Progreso
+- Configuración del juego
+- Estados de la IA
+- Físicas
+- Estadísticas
+
+## Tipos de datos comunes
+
+Variables en memoria
+: Puntos de vida, velocidad de movimiento, inventario actual
+
+Archivos persistentes
+: Partidas guardadas, configuración del usuario
+
+Bases de datos
+: Juegos grandes o multijugador (MMORPG) almacenan datos en servidores
+
+| Tipo de dato | Descripción | Ejemplo |
+| --- | --- | --- |
+| Temporales (RAM) | Existen solo mientras el juego está activo | Posición del jugador |
+| Persistentes | Se guardan para futuras sesiones | Progreso, configuraciones |
+| Estáticos | Datos que no cambian, usados como referencia | Valores base de armas |

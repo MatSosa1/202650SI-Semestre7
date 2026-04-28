@@ -1,3 +1,6 @@
 [submodule "desseguro-30735/P1/labs/2"]
 	path = desseguro-30735/P1/labs/2
 	url = git@github-espe:IMarcusDev/Laboratorio2_U1_30735_DesarroloSeguro.git
+[submodule "pasantias-31109/31109-PPP"]
+	path = pasantias-31109/31109-PPP
+	url = git@github-espe:MatSosa1/31109-PPP.git
