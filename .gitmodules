@@ -1,12 +1,15 @@
 [submodule "desseguro-30735/P1/labs/2"]
 	path = desseguro-30735/P1/labs/2
-	url = git@github-espe:IMarcusDev/Laboratorio2_U1_30735_DesarroloSeguro.git
+	url = https://github.com/IMarcusDev/Laboratorio2_U1_30735_DesarroloSeguro
 [submodule "pasantias-31109/31109-PPP"]
 	path = pasantias-31109/31109-PPP
-	url = git@github-espe:MatSosa1/31109-PPP.git
+	url = https://github.com/MatSosa1/31109-PPP
 [submodule "distribuidas-30732/P1/Actividades/WebChat"]
 	path = distribuidas-30732/P1/Actividades/WebChat
 	url = https://github.com/MatSosa1/30732_P1_Webchat
 [submodule "videojuegos-30818/SoldierCarer"]
 	path = videojuegos-30818/SoldierCarer
 	url = https://github.com/MatSosa1/30818-SoldierCarer
+[submodule "desseguro-30735/P1/Proyecto"]
+	path = desseguro-30735/P1/Proyecto
+	url = https://github.com/IMarcusDev/DSS_30735_ProyectoU1
