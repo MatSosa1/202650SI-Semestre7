@@ -3,18 +3,19 @@ author: Mateo Sosa
 nrc: 30808
 assignment: Ingeniería de la Seguridad del Software
 filetype: pdf
-template: informe
+template: espe
+filename: Cuaderno
 
 ---
 
-# 07 - Abr - 2026
+# 07 - Abril - 2026
 
 ## Objetivos de Aprendizaje
 
 1. Presentación
 2. Macro-Micro Currículum
 3. **UNIDAD 1**
-    - Fundamentosde la Ingeniería de la Información
+    - Fundamentos de la Ingeniería de la Información
 4. Práctica de Laboratorio: Análisis de Tráfico entre HTTP vs. HTTPS utilizando _WireShark_ en un _VNE_
 
 ## Meditación

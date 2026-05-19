@@ -1,4 +1,4 @@
-# 29 - Apr - 2026
+# 28 - Abril - 2026
 
 ## Objetivos de Aprendizaje
 
@@ -106,19 +106,19 @@ Las organizaciones deben:
     - Canales
     - Protección de datos de usuario
 
-## Conceptos Inportantes
+## Conceptos Importantes
 
 Identification
-: Usuario ingresa el ID y contraseña
+: Proceso mediante el cual un usuario declara su identidad dentro de un sistema, generalmente ingresando un nombre de usuario o identificador.
 
 Authentication
-: 
+: Proceso de verificación de identidad donde el sistema valida que el usuario es realmente quien dice ser, normalmente mediante contraseñas, tokens, biometría o autenticación multifactor.
 
 Authorization
-:
+: Proceso que determina los permisos y privilegios que posee un usuario autenticado para acceder a recursos, archivos o funcionalidades específicas.
 
 Auditing
-:
+: Registro y monitoreo de actividades realizadas dentro de un sistema para fines de supervisión, análisis forense y cumplimiento de políticas de seguridad.
 
 Accounting
-:
+: Proceso de recopilación y almacenamiento de información relacionada con el uso de recursos y actividades de los usuarios, incluyendo tiempos de acceso, consumo de recursos y acciones ejecutadas.

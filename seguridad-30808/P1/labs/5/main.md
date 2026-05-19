@@ -62,26 +62,76 @@ Al automatizar esta búsqueda, el ethical hacker puede priorizar objetivos para 
 
 ## Reconocimiento Inicial
 
-![Revisión de Conectividad entre Metasploitable y Kali](./img/kali_step1.png)
+![Revisión de Conectividad entre Metasploitable y Kali\label{kali_step1}](./img/kali_step1.png)
+
+Para iniciar con el desarrollo, se debe constar una conexión entre ambos dispositivos, tal como se observa en la figura \ref{kali_step1}.
+
+Se detectaron 3 dispositivos en la misma red.
 
 ## Escaneo de Puertos y Versiones
 
+![Escaneo de Servicios Detallado\label{kali_step2}](./img/kali_step2.png)
+
+La figura \ref{kali_step2} detecta que la máquina virtual de Metasploitable etiene una versión de Linux 2.6.X, cuyo kernel es _linux\_kernel:2.6_.
+
 ## Enumeración de Servicios Específicos
+
+![Extracción de Información\label{kali_step3}](./img/kali_step3.png)
+
+Como se puede observar en la figura \ref{kali_step3}, se hizo un ataque de fuerza bruta al objetivo, aunque no pudo encontrar ningún usuario o dominio.
 
 ## Script y Análisis de Vulnerabilidades
 
-# Resultados Esperados
+![Script de Vulnerabilidades](./img/kali_step4_script.png)
 
-- Una tabla con el mapeo de servicios abiertos en Metasploitable 2 (FTP 21, SSH 22, Telnet 23, SMB 445, etc.).
-- Una lista de usuarios o recursos compartidos (en caso de que el Objetivo B esté configurado con Samba/SMB).
+El script de vulnerabilidades es el siguiente:
 
-# Reflexión
+```sh
+# IP de Metasploitable
+IP_ADDRESS='192.168.56.210'
 
-- Las herramientas de escaneo y enumeración solo proporcionan un inventario de la superficie de ataque.
-- El valor no radica en ejecutar el comando, sino en analizar el resultado.
-- Un servicio obsoleto (ej. FTP o Telnet detectado con `-sV`) representa un objetivo de alta prioridad debido a:
-  - Posibles credenciales por defecto
-  - Vulnerabilidades conocidas
+# Comandos para vulnerar
+nmap -F -sV -v $IP_ADDRESS
+
+sudo nmap -sV --script=vuln -v $IP_ADDRESS
+
+nmap -sV -v $IP_ADDRESS
+
+nmap -sV -p 1-65535 -T4 $IP_ADDRESS
+
+nmap -sV --script=banner $IP_ADDRESS
+
+```
+
+![Ejecución del Script de Vulnerabilidades sobre Metasploitable\label{kali_step4_exec}](./img/kali_step4_exec.png)
+
+En la ejecución del script mostrada en la figura \ref{kali_step4_exec}, se aprecian los fallos de seguridad concretos de la máquina virtual.
+
+# Ejercicios
+
+## Escaneo general de vulnerabilidades
+
+![Panorama Rápido de Servicios y Posibles Vulnerabilidades](./img/kali_nmap_script-vuln.png)
+
+## Escaneo rápido masivo
+
+![Identificación de Hosts Activos y Puertos Abiertos](./img/kali_nmap_minrate.png)
+
+## _Fingerprinting_ y detección de versiones
+
+![Identificación de Sistema Operativo y Versiones](./img/kali_nmap_T4.png)
+
+## Uso de Categorías NSE
+
+![Detección de Problemas en Servicios Web y Aplicaciones](./img/kali_nmap_p_script.png)
+
+## Escaneo de vulnerabilidades SSL/TLS
+
+![Identificación de Problemas en Capa TLS/SSL](./img/kali_nmap_ssl-enum-ciphers.png)
+
+## Escaneo centrado en SMB/Windows
+
+![Enumeración de Servicios SMB y Posibles Vulnerabilidades Relacionadas](./img/kali_nmap_samba.png)
 
 # Conclusiones
 

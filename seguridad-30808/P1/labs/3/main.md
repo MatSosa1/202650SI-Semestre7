@@ -231,20 +231,20 @@ Last-Update: 2026-01-16
 
 ## Tabla
 
-| Campo | Valor Encontrado | Observación | Guía para el estudiante |
-| --- | --- | --- | --- |
-| Registrant Organization |  |  | ¿Quién es el dueño del dominio? (empresa o persona) |
-| Registrar |  |  | ¿Qué empresa registró el dominio? (ej. GoDaddy, Namecheap) |
-| IP Address |  |  | Dirección IP asociada al dominio |
-| IP Location |  |  | País o ciudad donde está alojado el servidor |
-| Name Servers |  |  | Servidores DNS que gestionan el dominio |
-| Last Update |  |  | Fecha de última modificación del dominio |
+| Campo                   | Valor Encontrado                                   | Observación                                                              | Guía para el estudiante                                    |
+| ----------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| Registrant Organization | Internet Assigned Numbers Authority                | Organización que administra dominios de ejemplo y estándares de Internet | ¿Quién es el dueño del dominio? (empresa o persona)        |
+| Registrar               | IANA (res-dom.iana.org)                            | No es un registrador comercial típico, ya que el dominio es reservado    | ¿Qué empresa registró el dominio? (ej. GoDaddy, Namecheap) |
+| IP Address              | 104.20.23.154 / 172.66.147.243                     | IPs pertenecen a infraestructura de Cloudflare (CDN/proxy)               | Dirección IP asociada al dominio                           |
+| IP Location             | Red distribuida (Cloudflare, global)               | No apunta a un país específico porque usa CDN                            | País o ciudad donde está alojado el servidor               |
+| Name Servers            | hera.ns.cloudflare.com / elliott.ns.cloudflare.com | DNS gestionado por Cloudflare                                            | Servidores DNS que gestionan el dominio                    |
+| Last Update             | 2026-01-16                                         | Última actualización registrada del dominio                              | Fecha de última modificación del dominio                   |
 
 ## Verificación Pasiva
 
-Para el correo institucional (dmsosa3@espe.edu.ec), la revisión dentro de la página web en la figura \ref{} determinó que no existen ataques realizados a esta dirección de correo electrónico.
+Para el correo institucional (dmsosa3@espe.edu.ec), la revisión dentro de la página web en la figura \ref{haveibeenpwned} determinó que no existen ataques realizados a esta dirección de correo electrónico.
 
-![Verificación Pasiva en _haveibeenpwned.com_](./img/haveibeenpwned.png)
+![Verificación Pasiva en _haveibeenpwned.com_\label{haveibeenpwned}](./img/haveibeenpwned.png)
 
 # Conclusiones
 

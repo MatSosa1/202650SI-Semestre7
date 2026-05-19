@@ -1,0 +1,122 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Paquetes ---
+\usepackage[american]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% --- Márgenes ajustados para respetar el límite de 3 páginas ---
+\geometry{
+    top=2cm,
+    bottom=2.2cm,
+    left=2.5cm,
+    right=2.5cm
+}
+
+\onehalfspacing
+
+% --- Formato de secciones compacto ---
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+% --- Encabezado y pie de página ---
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Ingeniería de Seguridad del Software -- ESPE 2026}
+\lhead{\small Marcos Velásquez}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Metadatos del documento ---
+\hypersetup{
+    pdftitle={Informe Técnico: Curso Ethical Hacker -- Cisco Networking Academy},
+    pdfauthor={Marcos Velásquez},
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+
+% ============================================================
+\begin{document}
+
+% --- Encabezado institucional ---
+\begin{center}
+    {\large \textbf{Universidad de las Fuerzas Armadas ESPE}} \\[2pt]
+    {\normalsize Carrera de Ingeniería de Seguridad del Software} \\
+    {\normalsize Ingeniería de Seguridad del Software -- Unidad 1} \\[6pt]
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\large \textbf{Informe Técnico: Curso Ethical Hacker}} \\
+    {\normalsize Cisco Networking Academy} \\[4pt]
+    \rule{\linewidth}{0.4pt}\\[4pt]
+    {\small \textbf{Estudiante:} Marcos Velásquez \quad
+     \textbf{Docente:} Ph.D. Walter Marcelo Fuertes Díaz \quad
+     \textbf{Fecha:} Abril 2026}
+\end{center}
+
+% ============================================================
+\section{Introducción}
+
+La ciberseguridad se ha convertido en un pilar fundamental de la ingeniería de software moderna. En este contexto, el \textit{ethical hacking} emerge como disciplina orientada a identificar y remediar vulnerabilidades antes de que agentes maliciosos puedan explotarlas. Como señalan \citet{Whitman2021}: ``la seguridad de la información no es un problema tecnológico, sino un problema de gestión con componentes tecnológicos'', lo que subraya que proteger los sistemas requiere tanto comprensión técnica como visión estratégica.
+
+El presente informe sintetiza los aprendizajes obtenidos durante la realización del curso \textit{Ethical Hacker} de Cisco Networking Academy \citep{Cisco2024}, un programa de nivel intermedio de 70 horas con 34 laboratorios prácticos, organizado en nueve módulos temáticos.
+
+% ============================================================
+\section{Resumen de Contenidos Abordados}
+
+El curso abarcó el ciclo completo de una prueba de penetración (\textit{penetration testing}). Los módulos iniciales establecieron los fundamentos éticos y metodológicos del hacking ético, diferenciando claramente los roles de \textit{white hat}, \textit{grey hat} y \textit{black hat hackers}, así como los marcos normativos que regulan este tipo de evaluaciones \citep{EC-Council2022}.
+
+La fase de \textbf{reconocimiento} —pasivo y activo— incluyó técnicas de OSINT (\textit{Open Source Intelligence}), uso de \texttt{Nmap} para descubrimiento de hosts y servicios, y análisis de vulnerabilidades con herramientas como \texttt{Nessus} y \texttt{OpenVAS}. Posteriormente, los módulos de \textbf{ingeniería social} exploraron el pretexting, phishing y técnicas de influencia psicológica, reforzando la idea de que el factor humano constituye el eslabón más débil de cualquier sistema \citep{Hadnagy2018}.
+
+En cuanto a la explotación, el curso analizó vectores de ataque sobre redes cableadas e inalámbricas, y dedicó especial atención a vulnerabilidades de aplicaciones web basándose en el estándar OWASP Top 10 \citep{OWASP2021}, cubriendo inyección SQL, XSS, CSRF, \textit{broken authentication} y configuraciones incorrectas de seguridad. Finalmente, se estudiaron técnicas post-explotación (persistencia, movimiento lateral, evasión de detección), seguridad en entornos cloud, dispositivos móviles e IoT, y la elaboración de informes profesionales de pentest.
+
+% ============================================================
+\section{Principales Herramientas Estudiadas}
+
+A lo largo de los laboratorios se trabajó con un conjunto representativo de herramientas del ecosistema de seguridad ofensiva y defensiva:
+
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Nmap}: escáner de redes para descubrimiento de hosts, puertos y servicios.
+    \item \textbf{Metasploit Framework}: plataforma de explotación modular para pruebas de penetración \citep{Kennedy2011}.
+    \item \textbf{Burp Suite}: proxy de interceptación para análisis y explotación de aplicaciones web.
+    \item \textbf{Wireshark}: analizador de tráfico de red en tiempo real.
+    \item \textbf{Aircrack-ng}: suite para auditoría de redes inalámbricas (captura y cracking de claves WEP/WPA).
+    \item \textbf{Social-Engineer Toolkit (SET)}: marco de automatización de ataques de ingeniería social.
+    \item \textbf{Nessus / OpenVAS}: escáneres de vulnerabilidades para evaluación sistemática de activos.
+    \item \textbf{Hydra}: herramienta de fuerza bruta para servicios de autenticación.
+\end{itemize}
+
+% ============================================================
+\section{Fases del Ethical Hacking}
+
+La metodología de pruebas de penetración, en línea con estándares como PTES (\textit{Penetration Testing Execution Standard}) y el marco del \textit{EC-Council} \citep{EC-Council2022}, se articula en cinco fases:
+
+\textbf{1. Reconocimiento}: recopilación de información sobre el objetivo mediante técnicas pasivas (OSINT, WHOIS, Google Dorks) y activas (escaneo de puertos, enumeración de servicios). \textbf{2. Escaneo y análisis de vulnerabilidades}: identificación de debilidades explotables con herramientas automatizadas. \textbf{3. Explotación}: aprovechamiento de las vulnerabilidades descubiertas para obtener acceso no autorizado al sistema, respetando siempre el alcance definido en el contrato. \textbf{4. Post-explotación}: actividades orientadas a mantener acceso, escalar privilegios y moverse lateralmente dentro de la red comprometida. \textbf{5. Elaboración del informe}: documentación detallada de los hallazgos, su criticidad y las recomendaciones de remediación para el cliente.
+
+% ============================================================
+\section{Reflexión Crítica}
+
+Desde la perspectiva de la ingeniería de software, la integración del \textit{ethical hacking} en el ciclo de desarrollo resulta imprescindible. Como afirma \citet{Weidman2014}: ``entender cómo piensan los atacantes es el primer paso para construir sistemas verdaderamente seguros''. Este principio, conocido como \textit{security by design}, implica incorporar evaluaciones de seguridad desde las fases tempranas del desarrollo, no como medida correctiva tardía.
+
+El análisis del OWASP Top 10 \citep{OWASP2021} evidencia que la mayoría de las vulnerabilidades más críticas en aplicaciones web son consecuencia de malas prácticas de programación, validación insuficiente de entradas y gestión deficiente de la autenticación —errores que un ingeniero de software con formación en seguridad puede prevenir durante el diseño. La ciberseguridad, por tanto, no es responsabilidad exclusiva del equipo de seguridad: es una competencia transversal que todo profesional del software debe cultivar.
+
+El curso \textit{Ethical Hacker} de Cisco consolida esta visión integradora, ofreciendo una perspectiva práctica y ética que complementa de manera directa la formación en ingeniería de software y prepara al profesional para enfrentar los desafíos de un entorno digital en constante evolución.
+
+% ============================================================
+\bibliographystyle{apalike}
+\bibliography{referencias_ethical_hacking}
+
+\end{document}

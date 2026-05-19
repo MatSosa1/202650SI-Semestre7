@@ -1,0 +1,43 @@
+# Los 6 Pilares del Diseño Distribuido
+
+Heterogeneidad
+: Diversidad de hardware, Software y lenguajes unificados por estándares.
+
+Apertura
+: Integración de nuevos servicios mediante interfaces públicas sin interrumpir la red.
+
+Concurrencia
+: Ejecución simultánea de procesos que exige mecanismos de sincronización.
+
+Escalabilidad
+: Adaptación a cargas masivas mediante escalamiento horizontal (adición de nodos).
+
+Tolerancia a Fallos
+: Continuidad operativa garantizada ante la caída de nodos específicos.
+
+Transparencia
+: Ocultación de la compleja distribución física a los ojos del usuario.
+
+# La Matemática de la Tolerancia a Fallos
+
+## Escenario 1
+
+Individual
+
+$$ p $$
+$$ p = 0.01 $$
+
+## Escenario 2
+
+Redundancia Distribuida
+
+$$ n = 4 $$
+$$ (p)^4 = (0.01)^4 = 0.00000001 $$
+
+# Comunicación: El Sistema Nervioso Distribuido
+
+|  | HTTP/REST | gRPC | Mensajería (Kafka / RabbitMQ) |
+| --- | --- | --- | --- |
+| Protocolo | HTTP/1.1 (JSON) | HTTP/2 (Protobuf binario) | Binario sobre TCP / AMQP |
+| Modelo | Unario / Síncrono / Texto | Bidireccional (Streaming) / Baja Latencia | Asíncrono (Pub-sub / Colas) |
+| Caso de Uso Ideal | El estándar universal para APIs públicas e integraciones web simples | Comunicación interna ultra-rápida entre microservicios e IoT | Desacoplamiento total y procesamiento de Big Data en tiempo real |
