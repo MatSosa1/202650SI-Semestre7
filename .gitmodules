@@ -13,3 +13,6 @@
 [submodule "desseguro-30735/P1/Proyecto"]
 	path = desseguro-30735/P1/Proyecto
 	url = https://github.com/IMarcusDev/DSS_30735_ProyectoU1
+[submodule "seguridad-30808/P2/Proyecto"]
+	path = seguridad-30808/P2/Proyecto
+	url = https://github.com/IMarcusDev/Proyecto_ISSW_30808
