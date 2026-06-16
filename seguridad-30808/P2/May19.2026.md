@@ -44,3 +44,13 @@ Evitar:
 - Gerundios
 - Adjetivos
 - Palabras Coloquiales
+
+## Introducción a la Criptografía
+
+La criptografía es la disciplina encargada de proteger la información mediante técnicas matemáticas y algoritmos que permiten transformar los datos en formatos seguros e ilegibles para personas no autorizadas. Su objetivo principal es garantizar la confidencialidad de la información, evitando que terceros puedan acceder o interpretar datos sensibles durante su almacenamiento o transmisión. Aunque sus orígenes se remontan a la antigüedad, la criptografía moderna se ha convertido en un componente fundamental de la seguridad informática y las comunicaciones digitales.
+
+![Llave Digital Representando la Ciberseguridad](./img/cryptography.jpg)
+
+En la actualidad, la criptografía no solo protege la privacidad de los usuarios, sino que también proporciona mecanismos para asegurar la integridad, autenticidad y no repudio de la información. A través de técnicas como el cifrado simétrico, el cifrado asimétrico y las funciones hash, es posible verificar que los datos no han sido alterados, confirmar la identidad de los participantes en una comunicación y garantizar que una acción realizada no pueda ser negada posteriormente por su autor.
+
+El crecimiento de Internet, el comercio electrónico, la banca digital y los servicios en la nube ha incrementado significativamente la importancia de la criptografía en la vida cotidiana. Tecnologías como las firmas digitales, los certificados digitales y las infraestructuras de clave pública permiten establecer entornos de confianza para el intercambio seguro de información. Gracias a estos mecanismos, organizaciones y usuarios pueden realizar transacciones y comunicaciones electrónicas con mayores niveles de seguridad y protección frente a amenazas cibernéticas.

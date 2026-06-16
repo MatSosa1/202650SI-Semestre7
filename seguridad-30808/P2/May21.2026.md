@@ -29,18 +29,33 @@ Sin embargo, al leerla su madre, le dijo todo lo contrario: que era un genio y q
 - _"Para tener una gran idea, hay que tener muchas"_
 - _"Genious is one percent inspiration, ninety-nine percent perspiration"_
 
-## Criptología
+# Criptología
 
-- Criptografía
-- Criptoanálisis
+La criptología es la ciencia que estudia los métodos y técnicas relacionados con la protección y el análisis de la información. Su objetivo principal es garantizar la seguridad de los datos mediante mecanismos que permitan ocultar su contenido a personas no autorizadas y, al mismo tiempo, desarrollar procedimientos para evaluar o comprometer dichos mecanismos. La criptología constituye la base teórica de gran parte de la seguridad informática moderna y desempeña un papel fundamental en la protección de las comunicaciones digitales.
 
-### Criptografía
+Esta disciplina se divide principalmente en dos áreas: la criptografía y el criptoanálisis. Mientras la criptografía se enfoca en diseñar sistemas seguros para proteger la información, el criptoanálisis estudia las técnicas utilizadas para descubrir vulnerabilidades o descifrar mensajes sin conocer las claves legítimas. La interacción entre ambas áreas impulsa el desarrollo continuo de algoritmos más robustos y métodos de protección más eficaces.
 
-### Criptoanálisis
+![Dispositivo Utilizado para Cifrar en la Antiguedad](./img/cryptology_device.jpg)
 
-### Tipos de Criptología
+## Criptografía
 
-## Resumen "The Imitation Game"
+La criptografía es la rama de la criptología encargada de desarrollar técnicas para proteger la información mediante procesos de cifrado y descifrado. Su finalidad es transformar datos legibles en un formato incomprensible para cualquier persona que no posea la clave adecuada, garantizando así la confidencialidad de la información durante su almacenamiento o transmisión.
+
+Además de la confidencialidad, la criptografía moderna proporciona mecanismos para asegurar la integridad, autenticidad y no repudio de los datos. Tecnologías como el cifrado simétrico, el cifrado asimétrico, las funciones hash y las firmas digitales son ampliamente utilizadas en aplicaciones como banca electrónica, comercio digital, redes privadas virtuales y sistemas de autenticación seguros.
+
+## Criptoanálisis
+
+![Representación del Análisis de la Criptografía](./img/cryptoanalisis.png)
+
+El criptoanálisis es la rama de la criptología dedicada al estudio y evaluación de sistemas criptográficos con el propósito de identificar debilidades o recuperar información protegida sin disponer de las claves legítimas. Esta disciplina analiza algoritmos, protocolos y mecanismos de cifrado para determinar su nivel de resistencia frente a distintos tipos de ataques.
+
+Su importancia radica en que permite validar la seguridad de los sistemas criptográficos antes de que sean utilizados en entornos reales. Los especialistas en criptoanálisis emplean métodos matemáticos, estadísticos y computacionales para descubrir vulnerabilidades, contribuyendo al fortalecimiento de los algoritmos y al desarrollo de soluciones más seguras para la protección de la información.
+
+## Tipos de Criptología
+
+La criptología puede clasificarse principalmente en criptografía y criptoanálisis, aunque dentro de estas áreas existen diversas especializaciones. La criptografía incluye técnicas como la criptografía simétrica, asimétrica, de clave pública y las funciones hash, cada una diseñada para resolver necesidades específicas de seguridad en la gestión de la información.
+
+Por otro lado, el criptoanálisis abarca diferentes métodos de ataque y evaluación, como el análisis de frecuencia, los ataques de fuerza bruta y el estudio de vulnerabilidades matemáticas en algoritmos criptográficos. La combinación de ambas áreas permite mantener un equilibrio entre la creación de mecanismos de protección y la evaluación constante de su efectividad frente a nuevas amenazas tecnológicas.
 
 ## Código César
 
@@ -63,9 +78,3 @@ n
 
 26
 : Es el número de letras del alfabeto latino
-
-### Ejemplo
-
-Dado el mensaje ***Security*** cifre con el código césar y un desplazamiento de 5.
-
-

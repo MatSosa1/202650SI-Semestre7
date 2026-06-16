@@ -1,7 +1,7 @@
 import sys
 
 
-def cifrar_cesar(texto, desplazamiento=3):
+def cifrar_cesar(texto, desplazamiento=5):
     resultado = ""
 
     print(f"Texto original: {texto}")
