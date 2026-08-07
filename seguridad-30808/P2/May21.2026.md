@@ -9,7 +9,7 @@
 
 ## Meditación
 
-### Thomas Alva Edison
+### Thomas Alba Edison
 
 Nació en 1912 en Ohio, Estados Unidos.
 No terminó sus estudios pero fue uno de los mayores inventores de la humanidad.

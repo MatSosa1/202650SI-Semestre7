@@ -178,7 +178,7 @@ Los algoritmos más recomendados son bcrypt, Argon2 y PBKDF2, ya que están dise
 
 La comparación segura se implementa almacenando el hash de la contraseña y verificando la contraseña ingresada contra dicho hash mediante bibliotecas como `bcrypt` o `argon2`.
 
-## **Conclusiones**
+# Conclusiones
 
 1.  Las funciones hash permiten asegurar la integridad y autenticidad de
     datos en entornos digitales.
@@ -193,7 +193,7 @@ La comparación segura se implementa almacenando el hash de la contraseña y ver
     utilidades para aplicar criptografía hash de forma eficiente y
     didáctica.
 
-## **Referencias Bibliográficas**
+# Referencias Bibliográficas
 
 1.  Stallings, W. (2017). *Cryptography and Network Security: Principles
     and Practice*. Pearson.

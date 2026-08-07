@@ -16,3 +16,24 @@
 [submodule "seguridad-30808/P2/Proyecto"]
 	path = seguridad-30808/P2/Proyecto
 	url = https://github.com/IMarcusDev/Proyecto_ISSW_30808
+[submodule "aseguramiento-30734/P2/actividad-sonarqube/DSS_30735_ProyectoU1"]
+  path = aseguramiento-30734/P2/actividad-sonarqube/DSS_30735_ProyectoU1
+  url = https://github.com/IMarcusDev/DSS_30735_ProyectoU1
+[submodule "aseguramiento-30734/P2/actividad_sonarqube/DSS_30735_ProyectoU1"]
+	path = aseguramiento-30734/P2/actividad_sonarqube/DSS_30735_ProyectoU1
+	url = https://github.com/IMarcusDev/DSS_30735_ProyectoU1
+[submodule "desseguro-30735/P2/Proyecto"]
+	path = desseguro-30735/P2/Proyecto
+	url = https://github.com/MatSosa1/30735-P2-Proyecto
+[submodule "distribuidas-30732/P2/JWT"]
+	path = distribuidas-30732/P2/JWT
+	url = https://github.com/MatSosa1/30732_P2_JWTRefreshTokens
+[submodule "distribuidas-30732/P2/Clean_Solid"]
+	path = distribuidas-30732/P2/Clean_Solid
+	url = https://github.com/MatSosa1/30732_P2_ProjectSolid
+[submodule "distribuidas-30732/P2/autonomo/project-solid"]
+	path = distribuidas-30732/P2/autonomo/project-solid
+	url = https://github.com/MatSosa1/30732_P2_ActividadRepasoSRP
+[submodule "distribuidas-30732/P2/fintech-securepay-base"]
+	path = distribuidas-30732/P2/fintech-securepay-base
+	url = https://github.com/MatSosa1/30732_P2_Examen
