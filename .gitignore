@@ -1,2 +1,11 @@
 *.mp4
 .gitconfig-espe
+
+# Herramientas
+sonar-scanner/
+
+# Paper Natación
+/paper_natacion
+
+# Pasantias
+pasantias-31109/

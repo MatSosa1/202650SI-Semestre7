@@ -37,3 +37,6 @@
 [submodule "distribuidas-30732/P2/fintech-securepay-base"]
 	path = distribuidas-30732/P2/fintech-securepay-base
 	url = https://github.com/MatSosa1/30732_P2_Examen
+[submodule "aseguramiento-30734/P3/Auditoria/27837_G1_ADS"]
+	path = aseguramiento-30734/P3/Auditoria/27837_G1_ADS
+	url = https://github.com/cmacuna7/27837_G1_ADS

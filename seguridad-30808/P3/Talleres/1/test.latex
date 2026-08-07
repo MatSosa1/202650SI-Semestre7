@@ -1,0 +1,461 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdfauthor={Mateo Sosa, Marcos Escobar, Stefany Díaz},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{Mateo Sosa, Marcos Escobar, Stefany Díaz}
+\date{}
+
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=0.7\linewidth,height=\maxheight,keepaspectratio}
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+
+
+\usepackage[
+  top=2.54cm,
+  bottom=2.54cm,
+  left=2.54cm,
+  right=2.54cm,
+  headsep=10pt,
+  a4paper
+]{geometry}
+
+\begin{document}
+
+\setcounter{secnumdepth}{0}  % No Enum Titles
+
+% Espe Logo
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=60mm]{~/.local/share/pandoc/templates/espe-logo.png}
+  \end{center}
+\end{figure}
+
+\textbf{UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE}
+
+\textbf{DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN} \\
+\textbf{Seguridad del Software}
+
+Integrantes: Mateo Sosa, Marcos Escobar, Stefany Díaz \\
+NRC: 30808 \\
+Fecha: \today \\
+
+
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\section{Actividad Extra}\label{actividad-extra}
+
+\subsection{Descripción del
+escenario}\label{descripciuxf3n-del-escenario}
+
+\subsubsection{Tipo de organización}\label{tipo-de-organizaciuxf3n}
+
+La organización corresponde a una \textbf{empresa de
+Telecomunicaciones}, dedicada a brindar servicios de telefonía móvil,
+telefonía fija, internet por fibra óptica y televisión por suscripción.
+La empresa administra información de miles de clientes y cuenta con
+diferentes departamentos, como Soporte Técnico, Operaciones, Atención al
+Cliente y Administración de Infraestructura.
+
+\subsubsection{Información crítica que debe
+protegerse}\label{informaciuxf3n-cruxedtica-que-debe-protegerse}
+
+La empresa almacena información sensible, entre la que se encuentra:
+
+\begin{itemize}
+\tightlist
+\item
+  Base de datos de clientes.
+\item
+  Información personal (nombres, direcciones, teléfonos y correos
+  electrónicos).
+\item
+  Contratos y facturación.
+\item
+  Configuraciones de equipos de red.
+\item
+  Credenciales de acceso a servidores.
+\item
+  Reportes internos y documentación técnica.
+\end{itemize}
+
+\subsubsection{Riesgos asociados al acceso no
+autorizado}\label{riesgos-asociados-al-acceso-no-autorizado}
+
+Si un usuario no autorizado accede a la información, podrían presentarse
+los siguientes problemas:
+
+\begin{itemize}
+\tightlist
+\item
+  Robo de información personal de clientes.
+\item
+  Modificación o eliminación de configuraciones críticas.
+\item
+  Interrupción de los servicios de telecomunicaciones.
+\item
+  Pérdidas económicas.
+\item
+  Incumplimiento de normativas de protección de datos.
+\item
+  Daño a la reputación de la empresa.
+\end{itemize}
+
+\subsection{Definición de usuarios y
+roles}\label{definiciuxf3n-de-usuarios-y-roles}
+
+\subsubsection{Usuarios \& Roles}\label{usuarios-roles}
+
+\begin{longtable}[]{@{}cc@{}}
+\caption{Clasificación de Usuarios en base a su Rol
+\label{table_roles}}\tabularnewline
+\toprule\noalign{}
+Usuario & Rol \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Usuario & Rol \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{admintelecom} & Administrador \\
+\emph{supervisor} & Analista \\
+\emph{analista1} & Analista \\
+\emph{invitado} & Analista \\
+\end{longtable}
+
+\begin{description}
+\tightlist
+\item[Administrador]
+Tiene acceso a todas las funcionalidades del sistema.
+\item[Analista]
+Puede realizar consultas sobre ciertos datos de ciertas tablas, pero no
+puede modificarlos ni revisar tablas sensibles.
+\end{description}
+
+\subsection{Aplicación de modelos de control de
+acceso}\label{aplicaciuxf3n-de-modelos-de-control-de-acceso}
+
+\subsubsection{Crear usuarios}\label{crear-usuarios}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ useradd }\AttributeTok{{-}m}\NormalTok{ admintelecom}
+\FunctionTok{sudo}\NormalTok{ useradd }\AttributeTok{{-}m}\NormalTok{ supervisor}
+\FunctionTok{sudo}\NormalTok{ useradd }\AttributeTok{{-}m}\NormalTok{ analista1}
+\FunctionTok{sudo}\NormalTok{ useradd }\AttributeTok{{-}m}\NormalTok{ invitado}
+
+\FunctionTok{sudo}\NormalTok{ passwd admintelecom}
+\FunctionTok{sudo}\NormalTok{ passwd supervisor}
+\FunctionTok{sudo}\NormalTok{ passwd analista1}
+\FunctionTok{sudo}\NormalTok{ passwd invitado}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/create_users.png}}
+\caption{Creación de 4 Usuarios}
+\end{figure}
+
+\subsubsection{Crear directorio y archivo
+confidencial}\label{crear-directorio-y-archivo-confidencial}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ mkdir /datos\_empresa}
+\FunctionTok{sudo}\NormalTok{ touch /datos\_empresa/clientes.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/create_directory.png}}
+\caption{Creación de Directorio de Datos de la Empresa en la Raíz}
+\end{figure}
+
+\subsubsection{Asignar propietario}\label{asignar-propietario}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ chown admintelecom:admintelecom /datos\_empresa/clientes.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/assign_propietary.png}}
+\caption{Asignación de un Propietario Administrador a un Archivo
+Sensible}
+\end{figure}
+
+\subsubsection{Configurar permisos}\label{configurar-permisos}
+
+Solo el propietario podrá leer y escribir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chmod}\NormalTok{ 600 /datos\_empresa/clientes.txt}
+\end{Highlighting}
+\end{Shaded}
+
+Verificar permisos:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ls} \AttributeTok{{-}l}\NormalTok{ /datos\_empresa/clientes.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/config_permissions.png}}
+\caption{Configuración de Permisos de Archivo Sensible}
+\end{figure}
+
+\subsubsection{Crear grupos}\label{crear-grupos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ groupadd administradores}
+\FunctionTok{sudo}\NormalTok{ groupadd analistas}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/create_groups.png}}
+\caption{Creación de Grupos en base a Roles de Tabla \ref{table_roles}}
+\end{figure}
+
+\subsubsection{Asignar usuarios a los
+grupos}\label{asignar-usuarios-a-los-grupos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ usermod }\AttributeTok{{-}aG}\NormalTok{ administradores admintelecom}
+\FunctionTok{sudo}\NormalTok{ usermod }\AttributeTok{{-}aG}\NormalTok{ administradores supervisor}
+
+\FunctionTok{sudo}\NormalTok{ usermod }\AttributeTok{{-}aG}\NormalTok{ analistas analista1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/assign_groups.png}}
+\caption{Asignación de Grupos en base a Roles de Tabla
+\ref{table_roles}}
+\end{figure}
+
+\subsection{Pruebas de funcionamiento}\label{pruebas-de-funcionamiento}
+
+\subsubsection{Usuario autorizado}\label{usuario-autorizado}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/user_auth.png}}
+\caption{Usuario \emph{Administrador} Permitido para Acceso y Lectura de
+Datos Sensibles}
+\end{figure}
+
+\subsubsection{Usuario sin permisos}\label{usuario-sin-permisos}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./img/user_no_auth.png}}
+\caption{Usuario \emph{Analista} No Permitido para Acceso y Lectura de
+Datos Sensibles}
+\end{figure}
+
+\subsection{Análisis}\label{anuxe1lisis}
+
+\subsubsection{¿Qué ventajas ofrece DAC en este
+escenario?}\label{quuxe9-ventajas-ofrece-dac-en-este-escenario}
+
+El modelo DAC permite que el propietario de los archivos controle
+directamente quién puede acceder a ellos. Es sencillo de implementar y
+adecuado para proteger recursos específicos cuando el propietario
+necesita administrar los permisos de forma individual.
+
+\subsubsection{¿Qué ventajas ofrece
+RBAC?}\label{quuxe9-ventajas-ofrece-rbac}
+
+RBAC simplifica la administración de permisos al asignarlos a grupos o
+roles en lugar de configurarlos usuario por usuario. Esto facilita el
+mantenimiento, reduce errores administrativos y mejora la escalabilidad
+cuando existen muchos empleados.
+
+\subsubsection{¿Cuál modelo recomendarían implementar en una
+organización real y por
+qué?}\label{cuuxe1l-modelo-recomendaruxedan-implementar-en-una-organizaciuxf3n-real-y-por-quuxe9}
+
+Se recomienda implementar principalmente \textbf{RBAC}, ya que una
+empresa de telecomunicaciones posee numerosos empleados con diferentes
+responsabilidades. La administración mediante roles facilita la
+incorporación de nuevos usuarios, reduce errores en la asignación de
+permisos y fortalece la seguridad. El modelo DAC puede utilizarse de
+manera complementaria para proteger archivos específicos que requieran
+permisos personalizados.
+
+\subsubsection{¿Qué vulnerabilidades podrían existir si los permisos
+estuvieran mal
+configurados?}\label{quuxe9-vulnerabilidades-podruxedan-existir-si-los-permisos-estuvieran-mal-configurados}
+
+Una configuración incorrecta de permisos podría ocasionar:
+
+\begin{itemize}
+\tightlist
+\item
+  Acceso no autorizado a información confidencial.
+\item
+  Modificación o eliminación accidental de archivos críticos.
+\item
+  Escalada de privilegios.
+\item
+  Robo de datos de clientes.
+\item
+  Alteración de configuraciones de la infraestructura.
+\item
+  Interrupción de servicios esenciales.
+\item
+  Incumplimiento de políticas y normativas de seguridad.
+\end{itemize}
+
+\newpage
+
+\end{document}
