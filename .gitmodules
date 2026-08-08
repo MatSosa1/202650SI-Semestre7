@@ -40,3 +40,24 @@
 [submodule "aseguramiento-30734/P3/Auditoria/27837_G1_ADS"]
 	path = aseguramiento-30734/P3/Auditoria/27837_G1_ADS
 	url = https://github.com/cmacuna7/27837_G1_ADS
+[submodule "desseguro-30735/P3/Examen"]
+	path = desseguro-30735/P3/Examen
+	url = https://github.com/MatSosa1/30735_P3_Examen
+[submodule "desseguro-30735/P3/Proyecto"]
+	path = desseguro-30735/P3/Proyecto
+	url = https://github.com/MatSosa1/30735_P3_Proyecto
+[submodule "desseguro-30735/P3/app-reservas"]
+	path = desseguro-30735/P3/app-reservas
+	url = https://github.com/IMarcusDev/30735_T2_U3_DSS
+[submodule "desseguro-30735/P3/recategorizacion-test"]
+	path = desseguro-30735/P3/recategorizacion-test
+	url = https://github.com/agcudco/recategorizacion-test
+[submodule "desseguro-30735/P3/reservas-consultorio"]
+	path = desseguro-30735/P3/reservas-consultorio
+	url = https://github.com/IMarcusDev/E2E_30735_DSS
+[submodule "desseguro-30735/P3/sistema-atencion-qr"]
+	path = desseguro-30735/P3/sistema-atencion-qr
+	url = https://github.com/victor0043/sistema-atencion-qr
+[submodule "desseguro-30735/P3/taller-sast"]
+	path = desseguro-30735/P3/taller-sast
+	url = https://github.com/MatSosa1/30735_P3_TallerSAST
