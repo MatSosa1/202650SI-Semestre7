@@ -61,3 +61,12 @@
 [submodule "desseguro-30735/P3/taller-sast"]
 	path = desseguro-30735/P3/taller-sast
 	url = https://github.com/MatSosa1/30735_P3_TallerSAST
+[submodule "distribuidas-30732/P3/Proyecto"]
+	path = distribuidas-30732/P3/Proyecto
+	url = https://github.com/Steft91/30732_ProyectoCafeCampus
+[submodule "distribuidas-30732/P3/app-courses"]
+	path = distribuidas-30732/P3/app-courses
+	url = https://github.com/paulosk8/app-courses
+[submodule "distribuidas-30732/P3/nestjs-microservice"]
+	path = distribuidas-30732/P3/nestjs-microservice
+	url = https://github.com/MatSosa1/30732_P3_NX
