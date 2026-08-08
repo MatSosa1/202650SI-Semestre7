@@ -70,3 +70,9 @@
 [submodule "distribuidas-30732/P3/nestjs-microservice"]
 	path = distribuidas-30732/P3/nestjs-microservice
 	url = https://github.com/MatSosa1/30732_P3_NX
+[submodule "seguridad-30808/P3/Proyecto"]
+	path = seguridad-30808/P3/Proyecto
+	url = https://github.com/IMarcusDev/Proyecto_ISSW_30808
+[submodule "seguridad-30808/P3/ProyectoInterm"]
+	path = seguridad-30808/P3/ProyectoInterm
+	url = https://github.com/IMarcusDev/Intermediate_ISSW_P3_30808
