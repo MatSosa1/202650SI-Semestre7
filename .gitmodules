@@ -76,3 +76,6 @@
 [submodule "seguridad-30808/P3/ProyectoInterm"]
 	path = seguridad-30808/P3/ProyectoInterm
 	url = https://github.com/IMarcusDev/Intermediate_ISSW_P3_30808
+[submodule "videojuegos-30818/P3/maze-godot"]
+	path = videojuegos-30818/P3/maze-godot
+	url = https://github.com/suxrobGM/maze-godot
