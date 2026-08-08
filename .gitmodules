@@ -30,10 +30,10 @@
 	url = https://github.com/MatSosa1/30732_P2_JWTRefreshTokens
 [submodule "distribuidas-30732/P2/Clean_Solid"]
 	path = distribuidas-30732/P2/Clean_Solid
-	url = https://github.com/MatSosa1/30732_P2_ProjectSolid
+	url = https://github.com/paulosk8/cleansolid
 [submodule "distribuidas-30732/P2/autonomo/project-solid"]
 	path = distribuidas-30732/P2/autonomo/project-solid
-	url = https://github.com/MatSosa1/30732_P2_ActividadRepasoSRP
+	url = https://github.com/MatSosa1/30732_P2_ProjectSolid
 [submodule "distribuidas-30732/P2/fintech-securepay-base"]
 	path = distribuidas-30732/P2/fintech-securepay-base
 	url = https://github.com/MatSosa1/30732_P2_Examen
